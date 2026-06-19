@@ -72,11 +72,13 @@
 
     <div class="message-box">
       <p class="headline">Mahalo for dining with us!</p>
-      <p class="sub">Hope you had a wonderful experience.<br>We'd love to hear from you!</p>
+      <p class="sub">Hope you had a wonderful experience.<br>We'd love to hear from you!<br>Hi, I'm Shaun 👋 thanks for letting me serve you tonight</p>
     </div>
-
+    <!-- https://docs.google.com/forms/d/e/1FAIpQLSfZthJGf9nH53D-Rv6U2qI-5ycBzlUDZ0C4kG5q-qUXkZBurQ/viewform?usp=publish-editor
+ -->
     <p class="section-label">Leave a review</p>
-    <a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSfZthJGf9nH53D-Rv6U2qI-5ycBzlUDZ0C4kG5q-qUXkZBurQ/viewform?usp=publish-editor" target="_blank">
+    <a class="card" href="https://www.tripadvisor.com/UserReviewEdit-g60656-d1083842-Polynesian_Cultural_Center-Laie_Oahu_Hawaii.html
+" target="_blank">
     <div class="card-icon icon-star"><i class="ti ti-clipboard-list"></i></div>
       <div class="card-text">
         <p class="card-title">Review</p>
@@ -88,13 +90,18 @@
     <hr>
     <p class="section-label">Tips are always appreciated!</p>
 
-    <div class="card">
+    <div class="card" onclick="showCashMessage()" style="cursor: pointer;">
       <div class="card-icon icon-cash"><i class="ti ti-cash"></i></div>
       <div class="card-text">
         <p class="card-title">Cash</p>
         <p class="card-desc">always appreciated!</p>
       </div>
       <i class="ti ti-chevron-right card-arrow"></i>
+    </div>
+    <div id="cash-message" style="display: none; background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; text-align: left;">
+      <p style="font-size: 14px; color: #1a1a1a; line-height: 1.6;">
+        Mahalo! 🤙 Give me your shaka sign and I'll come to your table — or feel free to just leave it on the table. Thank you so much!
+      </p>
     </div>
 
     <a class="card" href="venmo://paycharge?txn=pay&recipients=shion1205&note=Thank%20you!" 
@@ -111,8 +118,6 @@
       </div>
       <i class="ti ti-external-link card-arrow"></i>
     </a>
-
-    <p class="no-tip">No tip? No problem — see you next time! 😊</p>
     <hr>
 <p class="section-label">What's next?</p>
 
@@ -152,5 +157,16 @@
 
 </div>
   </div>
+<script>
+function showCashMessage() {
+  const msg = document.getElementById('cash-message');
+  if (msg.style.display === 'block') {
+    msg.style.display = 'none';
+  } else {
+    msg.style.display = 'block';
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+</script>
 </body>
 </html>
