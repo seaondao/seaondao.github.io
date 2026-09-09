@@ -1,69 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="/images/Shion.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
-
-  <title>Shion Aida</title>
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shion Aida</title>
+<meta name="description" content="Shion Aida — computer science student at BYU–Hawaii, building web tools and automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="images/Shion.ico" type="image/x-icon">
 </head>
 <body>
 
-<nav>
-  <span class="nav-name">Shion Aida</span>
-  <div class="nav-links">
-    <a href="/">About</a>
-    <a href="/projects/index.html">Projects</a>
-    <a href="/">Contact</a>
+<nav class="topnav" id="topnav">
+  <a href="#" class="nav-name">Shion Aida</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#about" class="nav-link" data-section="about">About</a>
+    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
   </div>
 </nav>
 
-<div class="layout">
+<main class="content">
 
-  <aside class="sidebar">
-   
-    <div class="avatar"> </div>
-    <p class="sidebar-name">Shion Aida</p>
-    <p class="sidebar-bio">CS student at BYU Hawaii. Interested in web development and software engineering.</p>
-    <!-- <div class="sidebar-links">
-      <a href="">Link1</a>
-      <a href="">link2</a>
-      <a href="">Link3</a>
-    </div> -->
-  </aside>
+  <section class="hero">
+    <p class="eyebrow">Hi, I&rsquo;m</p>
+    <h1>Shion Aida</h1>
+    <p class="tagline">CS student at BYU&ndash;Hawaii. Interested in web development and software engineering.</p>
+  </section>
 
-  <main class="main">
-    <section id="about">
-      <h1>About me</h1>
-      <p>Hi, I'm Shion — a computer science student at Brigham Young University Hawaii. I enjoy building things for the web and learning new technologies.</p>
-      <p>Currently working on personal projects and growing my skills in front-end development.</p>
-    </section>
+  <section id="about" class="block">
+    <h2>About</h2>
+    <p>I&rsquo;m a computer science student at Brigham Young University&ndash;Hawaii. I enjoy building things for the web and learning new technologies.</p>
+    <p>Right now I&rsquo;m working on personal projects and growing my skills in front-end development.</p>
+  </section>
 
-    <!-- <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Ali'i Luau Review Page</h3>
-        <p>A mobile-friendly page for restaurant guests to leave reviews . Built with HTML, CSS, and hosted on GitHub Pages with a custom domain.</p>
-        <a href="https://shionaida.com/polynesia" target="_blank">shionaida.com/polynesia →</a>
-      </div>
-      <div class="project-card">
-        <h3>More coming soon...</h3>
-        <p>Currently working on new projects.</p>
-      </div>
-    </section> -->
+  <section id="projects" class="block">
+    <h2>Projects</h2>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-row"><i class="ti ti-mail"></i> <a href="mailto:shion1205@go.byuh.edu">shion1205@go.byuh.edu</a></div>
-      <div class="contact-row"><i class="ti ti-brand-linkedin"></i><a href="https://www.linkedin.com/in/shion-aida-b07b8935a/" target="_blank">LinkedIn</a></div>
-      <div class="contact-row"><i class="ti ti-brand-github"></i> <a href="https://github.com/seaondao" target="_blank">github.com/seaondao</a></div>
-    </section>
-  </main>
+    <div class="project-grid">
+      <a class="project-card" href="https://github.com/seaondao/CSV-to-VCF-converter-" target="_blank" rel="noopener">
+        <div class="project-thumb">
+          <img src="images/CSV.png" alt="CSV to VCF converter diagram">
+        </div>
+        <div class="project-card-body">
+          <p class="project-eyebrow">CSV to VCF converter</p>
+          <h3>Cut a 2-hour task to 10 minutes</h3>
+          <p class="project-desc">A Python script that converts Google Sheets contact data into an Android-ready VCF file, with emoji tagging for version tracking.</p>
+          <span class="project-tag">Python</span>
+        </div>
+      </a>
 
-</div>
+      <a class="project-card" href="https://hokjet.com/" target="_blank" rel="noopener">
+        <div class="project-thumb">
+          <img src="images/hokjetLanding1.png" alt="HOKJET landing page">
+        </div>
+        <div class="project-card-body">
+          <p class="project-eyebrow">HOKJET</p>
+          <h3>Thai travel t-shirt brand, built solo</h3>
+          <p class="project-desc">A full e-commerce brand from concept to live product: brand identity and print-ready artwork, AI-generated mockups with Kling AI, and a launch on AWS Amplify with a custom domain and SSL. Printify connects to Etsy for zero-inventory, print-on-demand fulfillment.</p>
+          <div class="tag-row">
+            <span class="project-tag">HTML/CSS/JS</span>
+            <span class="project-tag">AWS Amplify</span>
+            <span class="project-tag">Print on Demand</span>
+            <span class="project-tag">AI Tools</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
 
+  <section id="contact" class="block">
+    <h2>Contact</h2>
+    <p>Best reached by email, or find me on LinkedIn and GitHub.</p>
+    <div class="contact-list">
+      <a href="mailto:shion1205@go.byuh.edu">shion1205@go.byuh.edu</a>
+      <a href="https://www.linkedin.com/in/shion-aida-b07b8935a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/seaondao" target="_blank" rel="noopener">github.com/seaondao</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Shion Aida</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
