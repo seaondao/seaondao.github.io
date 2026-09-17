@@ -171,7 +171,11 @@ h1, h2, h3 {
 }
 
 /* ---------- Projects ---------- */
-
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .project-grid {
   display: flex;
   flex-direction: column;
@@ -280,7 +284,6 @@ footer {
   }
 
   .nav-name {
-    padding-right: 0;
     font-size: 15px;
   }
 
